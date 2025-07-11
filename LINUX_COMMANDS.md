@@ -17,11 +17,13 @@ Here's a list of 100 important Linux commands:
 14. `tail` - Display the end of a file.
 
 *File Permissions:*
+
 15. `chmod` - Change file permissions.
 16. `chown` - Change file ownership.
 17. `chgrp` - Change group ownership.
 
 *User and Group Management:*
+
 18. `useradd` - Add a user.
 19. `passwd` - Change user password.
 20. `usermod` - Modify user properties.
@@ -32,6 +34,7 @@ Here's a list of 100 important Linux commands:
 25. `su` - Switch user or become superuser.
 
 *System Information:*
+
 26. `uname` - Display system information.
 27. `df` - Show disk space usage.
 28. `du` - Show file and directory space usage.
@@ -41,6 +44,7 @@ Here's a list of 100 important Linux commands:
 32. `uptime` - Show system uptime.
 
 *Package Management:*
+
 33. `apt` - Advanced Package Tool (Debian/Ubuntu).
 34. `yum` - Package manager (Red Hat/CentOS).
 35. `dnf` - Next-generation package manager (Fedora).
@@ -48,6 +52,7 @@ Here's a list of 100 important Linux commands:
 37. `dpkg` - Debian package manager.
 
 *Networking:*
+
 38. `ifconfig` - Network interface configuration.
 39. `ping` - Send ICMP echo requests.
 40. `netstat` - Network statistics.
@@ -59,6 +64,7 @@ Here's a list of 100 important Linux commands:
 46. `nc` - Netcat for network troubleshooting.
 
 *Archiving and Compression:*
+
 47. `tar` - Archive files.
 48. `gzip` - Compress files.
 49. `gunzip` - Decompress files.
@@ -66,25 +72,30 @@ Here's a list of 100 important Linux commands:
 51. `unzip` - Extract files from zip archives.
 
 *Process Control:*
+
 52. `kill` - Terminate processes.
 53. `pkill` - Send signals to processes.
 54. `killall` - Terminate processes by name.
 
 *Text Processing:*
+
 55. `awk` - Text processing tool.
 56. `sed` - Stream editor for text manipulation.
 
 *System Monitoring:*
+
 57. `htop` - Interactive process viewer.
 58. `iotop` - View I/O usage by processes.
 59. `nmon` - System monitoring tool.
 
 *System Maintenance:*
+
 60. `fsck` - File system check.
 61. `reboot` - Reboot the system.
 62. `shutdown` - Shutdown the system.
 
 *Package Installation and Removal:*
+
 63. `apt-get` - APT package handling utility.
 64. `yum install` - Install packages (Red Hat/CentOS).
 65. `dnf install` - Install packages (Fedora).
@@ -92,170 +103,127 @@ Here's a list of 100 important Linux commands:
 67. `dpkg -i` - Install Debian packages.
 
 *File Transfer:*
+
 68. `rsync` - Remote file synchronization.
 
 *Shell Scripting:*
+
 69. `bash` - Execute Bash scripts.
 70. `chmod +x` - Make a script executable.
 
 *File Permissions:*
+
 71. `chown` - Change file ownership.
 72. `chmod` - Change file permissions.
 
 *Text Editors:*
+
 73. `vi`/`vim` - Command-line text editor.
 74. `nano` - Simple text editor.
 
 *System Logs:*
+
 75. `tail -f` - Monitor log files in real-time.
 
 *Kernel Management:*
+
 76. `uname -r` - Display kernel version.
 77. `modprobe` - Load/unload kernel modules.
 
 *File Transfer Protocols:*
+
 78. `ftp` - File Transfer Protocol client.
 79. `sftp` - Secure FTP.
 80. `scp` - Securely copy files.
 
 *Disk Management:*
+
 81. `fdisk` - Disk partitioning utility.
 82. `mkfs` - Create a filesystem.
 83. `mount` - Mount a filesystem.
 84. `umount` - Unmount a filesystem.
 
 *System Information:*
+
 85. `lscpu` - Display CPU information.
 86. `lsusb` - List USB devices.
 87. `lsblk` - List block devices.
 88. `lshw` - List hardware information.
 
 *Package Queries:*
+
 89. `dpkg -l` - List installed packages (Debian/Ubuntu).
 90. `rpm -qa` - List installed packages (Red Hat/CentOS).
 91. `yum list installed` - List installed packages (Red Hat/CentOS).
 
 *Firewall Configuration:*
+
 92. `ufw` - Uncomplicated Firewall (Ubuntu).
 93. `iptables` - Advanced firewall configuration.
 
 *Cron Jobs:*
+
 94. `crontab` - Schedule tasks.
 95. `at` - Schedule one-time tasks.
 
 *SSH Key Management:*
+
 96. `ssh-keygen` - Generate SSH keys.
 97. `ssh-copy-id` - Copy SSH keys to remote hosts.
 
 *System Updates:*
+
 98. `apt update` - Update package lists (Debian/Ubuntu).
 99. `yum update` - Update packages (Red Hat/CentOS).
 100. `dnf update` - Update packages (Fedora).
 
-scp /path/to/example_file.txt username@host_server:/path/on/host/server/
-scp vm1711:/tmp/ex.file /tmp
+`scp /path/to/example_file.txt username@host_server:/path/on/host/server/`
 
+`scp vm1711:/tmp/ex.file /tmp`
 
 These commands cover a wide range of Linux system administration and everyday tasks. Remember to use them with caution, especially commands that can modify or delete files and directories.
 
 ========================
+
 To check **system information in Linux**, you can use the following commands depending on what details you want:
 
 ### 🖥️ 1. **Basic System Info**
 
-```bash
-uname -a
-```
+`uname -a` - Shows kernel name, version, and architecture.
 
-* Shows kernel name, version, and architecture.
-
-```bash
-hostnamectl
-```
-
-* Shows OS, kernel, architecture, hostname, etc.
-
----
+`hostnamectl` - Shows OS, kernel, architecture, hostname, etc.
 
 ### 💾 2. **CPU Information**
 
-```bash
-lscpu
-```
-
-* Displays CPU architecture, cores, threads, and more.
-
----
+`lscpu` - Displays CPU architecture, cores, threads, and more.
 
 ### 🧠 3. **Memory Info (RAM)**
 
-```bash
-free -h
-```
+`free -h` - Shows total, used, and free memory in human-readable format.
 
-* Shows total, used, and free memory in human-readable format.
-
-```bash
-cat /proc/meminfo
-```
-
-* Detailed memory stats.
-
----
+`cat /proc/meminfo`  Detailed memory stats.
 
 ### 💽 4. **Disk and Partition Info**
 
-```bash
-lsblk
-```
+`lsblk` - Lists block devices (disks, partitions).
 
-* Lists block devices (disks, partitions).
-
-```bash
-df -h
-```
-
-* Shows disk space usage.
-
----
+`df -h` - Shows disk space usage.
 
 ### 🌐 5. **Network Info**
 
-```bash
-ip a
-```
+`ip a` - Shows all network interfaces and IPs.
 
-* Shows all network interfaces and IPs.
-
-```bash
-nmcli device show
-```
-
-* Shows detailed network device info.
-
----
+`nmcli device show` - Shows detailed network device info.
 
 ### 🧰 6. **Distro Info**
 
-```bash
-cat /etc/os-release
-```
+`cat /etc/os-release` -  Shows Linux distribution name, version, etc.
 
-* Shows Linux distribution name, version, etc.
-
-```bash
-lsb_release -a
-```
-
-* (If installed) Detailed release info for Debian-based systems.
-
----
+`lsb_release -a` - (If installed) Detailed release info for Debian-based systems.
 
 ### ✅ 7. **Full Summary (one-shot)**
 
-```bash
-inxi -F
-```
+`inxi -F`
 
 > 🔧 If `inxi` not found, install it using:
 
@@ -267,12 +235,8 @@ sudo dnf install inxi      # Fedora
 
 ---
 
-Would you like me to prepare a script to check all these details at once?
-
-
-========================
 VI EDITOR COMMANDS
-========================
+
 Certainly! Here are some important Vi (or Vim) editor commands in Linux:
 
 *Navigation:*
@@ -286,6 +250,7 @@ Certainly! Here are some important Vi (or Vim) editor commands in Linux:
 8. `:n` - Move to line "n" (replace "n" with line number).
 
 *Text Editing:*
+
 9. `i` - Insert mode before the cursor.
 10. `I` - Insert mode at the beginning of the current line.
 11. `a` - Append mode after the cursor.
@@ -301,6 +266,7 @@ Certainly! Here are some important Vi (or Vim) editor commands in Linux:
 21. `Ctrl + r` - Redo the last change.
 
 *Search and Replace:*
+
 22. `/` - Search forward (type your search term).
 23. `?` - Search backward (type your search term).
 24. `n` - Go to the next search result.
@@ -309,6 +275,7 @@ Certainly! Here are some important Vi (or Vim) editor commands in Linux:
 27. `:%s/search_term/replace_term/g` - Replace "search_term" with "replace_term" globally in the entire file.
 
 *Saving and Quitting:*
+
 28. `:w` - Save changes.
 29. `:q` - Quit (if no changes).
 30. `:q!` - Quit without saving changes.
@@ -316,6 +283,7 @@ Certainly! Here are some important Vi (or Vim) editor commands in Linux:
 32. `:x` or `ZZ` - Save and quit (if changes).
 
 *Copy and Paste:*
+
 33. `v` - Enter visual mode (for selecting text).
 34. `V` - Enter visual line mode (select entire lines).
 35. `y` - Yank (copy) selected text.
@@ -324,6 +292,7 @@ Certainly! Here are some important Vi (or Vim) editor commands in Linux:
 38. `"+p` - Paste text from system clipboard.
 
 *Advanced Editing:*
+
 39. `.` - Repeat the last command.
 40. `:set number` - Display line numbers.
 41. `:set nonumber` - Hide line numbers.
