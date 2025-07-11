@@ -1,7 +1,4 @@
-scp /path/to/example_file.txt username@host_server:/path/on/host/server/
-scp vm1711:/tmp/ex.file /tmp/
-
-Certainly! Here's a list of 100 important Linux commands:
+Here's a list of 100 important Linux commands:
 
 *File and Directory Operations:*
 1. `ls` - List files and directories.
@@ -154,6 +151,10 @@ Certainly! Here's a list of 100 important Linux commands:
 98. `apt update` - Update package lists (Debian/Ubuntu).
 99. `yum update` - Update packages (Red Hat/CentOS).
 100. `dnf update` - Update packages (Fedora).
+
+scp /path/to/example_file.txt username@host_server:/path/on/host/server/
+scp vm1711:/tmp/ex.file /tmp
+
 
 These commands cover a wide range of Linux system administration and everyday tasks. Remember to use them with caution, especially commands that can modify or delete files and directories.
 
