@@ -47,3 +47,37 @@
 | 02:20 AM – 02:45 AM | 🧠 Pomodoro 10 – ✍️ Topic: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ |
 
 ---
+
+---
+
+## 🧠 Pomodoro Break Activity Chart
+
+### ⏱️ 5-Minute Short Breaks
+
+* Deep Breathing (Box: Inhale 4s, Hold 4s, Exhale 4s, Hold 4s)
+* Stretch neck, back, shoulders, arms and legs
+* Walk around your room or corridor
+* Drink a glass of water or lemon water
+* Look at something far away (20-20-20 rule)
+
+---
+
+### 🍽️ 30-Minute Long Breaks
+
+* Eat a light meal/snack
+* Go for a short outdoor walk
+* Listen to calm or lo-fi music
+* Do 5–10 minutes of meditation or breathwork
+* Sit in sunlight, nature, or balcony
+* Journal what you studied or learned
+
+---
+
+### ❌ What NOT to Do in Breaks
+
+* No scrolling Instagram, YouTube Shorts, Reels
+* Don’t jump to other work or chores
+* Avoid stressful news or multitasking
+* Don’t check work chats or emails
+
+---
