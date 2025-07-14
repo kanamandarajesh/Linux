@@ -544,3 +544,184 @@ tar -xzvf backup.tar.gz
    ```
 
 ---
+
+
+## 🔹 **Basic Level – Questions and Answers**
+1. **What is Linux and how is it different from Unix?**
+   **Answer:**
+   Linux is an open-source Unix-like operating system kernel. It's free and developed by the community. Unlike proprietary Unix systems (like AIX, Solaris), Linux distributions (like Ubuntu, CentOS, Red Hat) are widely available for various hardware.
+
+2. **What is the difference between a process and a thread?**
+   **Answer:**
+   A **process** is an independent program with its own memory space. A **thread** is a lightweight unit of a process that shares the same memory but can run concurrently.
+
+3. **Explain the Linux file system hierarchy.**
+   **Answer:**
+   The Linux file system starts with `/` (root). Common directories include:
+
+   * `/bin` – essential binaries
+   * `/etc` – system config files
+   * `/home` – user directories
+   * `/var` – log files, spools
+   * `/usr` – user applications
+   * `/tmp` – temporary files
+
+4. **What does the `ls -l` command show you?**
+   **Answer:**
+   It lists files and directories in long format, showing permissions, number of links, owner, group, size, and timestamp.
+
+5. **How do you check disk usage in Linux?**
+   **Answer:**
+   Use `df -h` for filesystem space usage and `du -sh /path` for space used by a directory.
+
+6. **What does `chmod 755 filename` do?**
+   **Answer:**
+   Sets file permissions to:
+
+   * Owner: read/write/execute
+   * Group: read/execute
+   * Others: read/execute
+
+7. **How do you view the contents of a text file in Linux?**
+   **Answer:**
+   Use `cat`, `less`, `more`, or `tail`.
+
+8. **What is the difference between soft and hard links?**
+   **Answer:**
+
+   * **Hard link**: Points to the inode. Still works if the original file is deleted.
+   * **Soft (symbolic) link**: Points to the file path. Breaks if the file is removed.
+
+9. **How do you find out the IP address of a Linux system?**
+   **Answer:**
+   Use `ip a`, `hostname -I`, or `ifconfig` (older systems).
+
+10. **How do you create a new user in Linux?**
+    **Answer:**
+    `sudo adduser username` or `sudo useradd -m username`
+    
+## 🔹 **Intermediate Level – Questions and Answers**
+
+1. **Difference between symbolic and hard link?**
+   **Answer:**
+   As above — symbolic links are like shortcuts, hard links are file-level clones that point to the same inode.
+
+2. **Use of `grep`, `awk`, `sed` – with examples:**
+   **Answer:**
+
+   * `grep "error" logfile.txt` – search lines with "error"
+   * `awk '{print $1}' file` – print first column
+   * `sed 's/foo/bar/g' file` – replace "foo" with "bar"
+
+3. **How do you schedule a job using `cron`?**
+   **Answer:**
+   Use `crontab -e` to edit a user’s cron jobs. Format:
+   `* * * * * command` (minute, hour, day, month, weekday)
+
+4. **Difference between `su` and `sudo`?**
+   **Answer:**
+
+   * `su` switches the user (asks for target user's password)
+   * `sudo` runs a command with root privileges (asks your password)
+
+5. **What happens when you execute a binary in Linux?**
+   **Answer:**
+   The shell loads the program, the kernel assigns it memory, and the process runs. The binary must have execute permissions.
+
+6. **How to find which process is using a specific port?**
+   **Answer:**
+   `sudo lsof -i :PORT`, or `netstat -tulnp | grep PORT`, or `ss -tulnp`
+
+7. **Explain the Linux boot process.**
+   **Answer:**
+
+   * BIOS → Bootloader (GRUB)
+   * Bootloader loads kernel
+   * Kernel loads init/systemd
+   * `systemd` starts services and user-space
+
+8. **What is a runlevel?**
+   **Answer:**
+   A state of the machine. Examples:
+
+   * 0: halt
+   * 1: single user
+   * 3: multi-user (no GUI)
+   * 5: multi-user + GUI
+     Modern systems use **systemd targets**.
+
+9. **How do you mount a file system?**
+   **Answer:**
+   `mount /dev/sdX1 /mnt`
+   Or define in `/etc/fstab` for persistence.
+
+10. **Explain `top`, `htop`, and how to identify high memory usage.**
+    **Answer:**
+
+* `top` and `htop` show system resource usage.
+* Look under `%MEM` or `RES` columns.
+* `htop` is interactive and color-coded.
+
+---
+
+## 🔹 **Advanced Level – Questions and Answers**
+
+1. **How does memory management work in Linux?**
+   **Answer:**
+   Uses virtual memory. When RAM is full, it uses swap. Memory is divided into pages. `vmstat`, `free -m`, and `/proc/meminfo` help monitor.
+
+2. **What are inodes?**
+   **Answer:**
+   Inodes store metadata about files (permissions, owner, timestamps), not content or name.
+
+3. **How do you troubleshoot a slow server?**
+   **Answer:**
+
+   * Use `top`, `iotop`, `vmstat`, `dstat`
+   * Check logs (`/var/log/`)
+   * Look for high CPU, I/O wait, memory swap
+
+4. **What is `strace` and when to use it?**
+   **Answer:**
+   `strace` traces system calls of a process. Useful for debugging crashing or hanging apps:
+   `strace ./app` or `strace -p PID`
+
+5. **Difference between `fork()` and `exec()`?**
+   **Answer:**
+
+   * `fork()` creates a new process (child)
+   * `exec()` replaces the current process image with a new program
+
+6. **How does `iptables` or `firewalld` work?**
+   **Answer:**
+
+   * `iptables` is a packet filter and firewall
+   * Rules are applied based on chains: INPUT, OUTPUT, FORWARD
+   * `firewalld` is a wrapper for managing rules dynamically
+
+7. **What is SELinux or AppArmor?**
+   **Answer:**
+   Security modules for mandatory access control (MAC).
+
+   * SELinux: More granular, used in RHEL
+   * AppArmor: Simpler, used in Ubuntu
+
+8. **Explain cgroups and namespaces.**
+   **Answer:**
+
+   * **cgroups** limit resource usage (CPU, memory) per process group
+   * **namespaces** isolate system resources (PID, NET, MNT, UTS), used in containers
+
+9. **How to troubleshoot NFS mount permission issues?**
+   **Answer:**
+
+   * Check `/etc/exports` on the server
+   * Validate user UID/GID mapping
+   * Use `showmount -e server_ip` and `mount -v`
+
+10. **How do you monitor logs in real-time?**
+    **Answer:**
+    `tail -f /var/log/syslog` or use tools like `journalctl -f` (for systemd systems)
+
+---
+
